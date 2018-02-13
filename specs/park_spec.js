@@ -39,16 +39,16 @@ describe('Park', function(){
       const actual = park.enclosure;
       assert.deepStrictEqual(actual, [velociraptor, tRex]);
     });
-    // it('should remove all dinosaurs of a specified type', function(){
-    //   park.addDinosaur(velociraptor);
-    //   park.addDinosaur(velociraptor2);
-    //   park.addDinosaur(velociraptor3);
-    //   park.addDinosaur(tRex);
-    //   park.addDinosaur(tRex);
-    //   park.removeAllOfType('Velociraptor');
-    //   actual = park.enclosure.length;
-    //   assert.deepStrictEqual(actual, 2);
-    // })
+    it('should remove all dinosaurs of a specified type', function(){
+      park.addDinosaur(velociraptor);
+      park.addDinosaur(velociraptor2);
+      park.addDinosaur(velociraptor3);
+      park.addDinosaur(tRex);
+      park.addDinosaur(tRex);
+      park.removeAllOfType('Velociraptor');
+      actual = park.enclosure.length;
+      assert.strictEqual(actual, 2);
+    })
     it('should return dinosaurs with yearlyOffspring greater than 2', function(){
         park.addDinosaur(velociraptor);
         park.addDinosaur(velociraptor2);
@@ -56,7 +56,7 @@ describe('Park', function(){
         park.addDinosaur(tRex);
         park.addDinosaur(tRex);
         const actual = park.getDinosYearlyOffspringOverTwo().length;
-        assert.deepStrictEqual(actual, 2);
+        assert.strictEqual(actual, 2);
     })
 
   });
