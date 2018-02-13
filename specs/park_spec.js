@@ -17,7 +17,14 @@ describe('Park', function(){
   it('should have a name', function(){
     actual = park.name;
     assert.strictEqual(actual, 'Jurassic Park');
-  })
+  });
+  describe('enclosure', function(){
+    it('should start empty', function(){
+      actual = park.enclosure.length;
+      assert.strictEqual(actual, 0);
+    })
+
+  });
 
 
 
