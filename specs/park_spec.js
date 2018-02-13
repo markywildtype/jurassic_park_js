@@ -22,6 +22,12 @@ describe('Park', function(){
     it('should start empty', function(){
       actual = park.enclosure.length;
       assert.strictEqual(actual, 0);
+    });
+    it('should be able to add dinosaurs', function(){
+      park.addDinosaur(velociraptor);
+      park.addDinosaur(tRex);
+      actual = park.enclosure.length;
+      assert.strictEqual(actual, 2);
     })
 
   });
